@@ -3,6 +3,7 @@ import SearchBar from "./SearchBar";
 import YouTube from "./apis/YouTube";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
+import './style/App.css';
 
 class App extends React.Component {
     state = {videos: [], selectedVideo: null};
@@ -30,7 +31,9 @@ class App extends React.Component {
 
     render() {
         return (
+
             <div className="ui container">
+                <div><h1 className="top-header" style={{textAlign: 'center'}} >Video Search</h1></div>
                 <SearchBar onFormSubmit={this.onTermSubmit} />
                 <div className="ui grid">
                     <div className="ui row">
